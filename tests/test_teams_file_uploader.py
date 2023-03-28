@@ -49,14 +49,14 @@ class TestTeamsFileUploader(unittest.TestCase):
         with tempfile.NamedTemporaryFile(delete=False) as tmp_file_download:
             pass
         # Download the uploaded file and check if its content matches with the original content
-        connector.download(teams_group_id, teams_channel_id, dst_file_name, tmp_file_download.name)
+        connector.download(teams_group_id, teams_channel_id, dst_file_name, tmp_file_download.name, dst_file_prefix)
         with open(tmp_file_download.name, 'rb') as f:
             downloaded_file_content = f.read()
         self.assertEqual(downloaded_file_content, file_upload_content)
         
         # Delete the uploaded file if it was uploaded successfully, and delete the temporary files
         if response:
-            connector.delete(teams_group_id, teams_channel_id, dst_file_name)
+            connector.delete(teams_group_id, teams_channel_id, dst_file_name, dst_file_prefix)
         os.unlink(tmp_file_upload.name)
         os.unlink(tmp_file_download.name)
 

@@ -4,7 +4,7 @@ Python package to simplify file uploads and downloads of MS Teams programmetrica
 
 ## Installation
 ```bash
-pip install ms_teams_files_connector
+pip install MSTeamsFileConnector
 ```
 
 
