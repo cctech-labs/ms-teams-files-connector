@@ -4,17 +4,17 @@ Python package to simplify file uploads and downloads of MS Teams programmetrica
 
 ## Installation
 ```bash
-pip install MSTeamsFileConnector
+pip install MSTeamsFilesConnector
 ```
 
 
 ## Usage
-Here's an example of how to use the `MSTeamsFileConnector` class to upload and delete files.
+Here's an example of how to use the `MSTeamsFilesConnector` class to upload and delete files.
 
 ```python
-from ms_teams_files_connector import MSTeamsFileConnector
+from ms_teams_files_connector import MSTeamsFilesConnector
 
-tfc = MSTeamsFileConnector(tenant_id='your_tenant_id', client_id='your_client_id', client_secret='your_client_secret')
+tfc = MSTeamsFilesConnector(tenant_id='your_tenant_id', client_id='your_client_id', client_secret='your_client_secret')
 
 teams_group_id = 'your_group_id'
 teams_channel_id = 'your_channel_id'
